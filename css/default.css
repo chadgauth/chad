@@ -2,13 +2,34 @@ html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del
 
 :root {
     font-size: 12pt;
-    background: #0288d1;
 }
 
 body {
-    margin: 2em auto;
-    color: #fdfbe7;
-    padding: 1em 1em;
+    color: darkgrey;
+    position:relative;
+}
+
+nav {
+    position:absolute;
+    right:0;
+    color: white;
+    z-index: 1;
+}
+
+header {
+    background: #1d1d1d;
+    line-height: 1.2em;
+    height: 35vh;
+    color: hsla(0, 0%, 70%, 1);
+    position: relative;
+    font-size: 1.8em;
+    font-family: sans-serif;
+    transition: font-size .35s ease-out;
+    margin: 0 auto;
+    text-align: center;
+    padding-top:30vh;
+    padding-right: 6em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.81);
 }
 
 h1 {
@@ -18,16 +39,65 @@ h1 {
     text-align:right;
 }
 
-p {
-    line-height: 1.2;
+.ad {
+    position: relative;
+    top: .27em;
+    height: 1.2em;
+    text-align: left;
 }
 
+.ad span {
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    animation: rotateWord 18s linear infinite 0s;
+    width: 7em;
+    color: hsla(284, 87%, 58%, 1);
+}
+
+.ad span:nth-child(2) { 
+	animation-delay: 3s; 
+	color: hsla(192, 44%, 63%, 1);
+}
+.ad span:nth-child(3) { 
+	animation-delay: 6s; 
+	color: hsla(55, 80%, 48%, 1);
+}
+.ad span:nth-child(4) { 
+	animation-delay: 9s; 
+	color: hsl(93, 45%, 50%);
+}
+.ad span:nth-child(5) { 
+	animation-delay: 12s; 
+	color: hsla(201, 64%, 60%, 1);
+}
+.ad span:nth-child(6) { 
+	animation-delay: 15s; 
+	color: hsla(118, 71%, 49%, 1);
+	font-family: consolas;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.vat {
+    vertical-align:top;
+}
+
+
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; transform: translateY(-30px); transform: translateY(-30px); }
+	5% { opacity: 1; transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; transform: translateY(0px); transform: translateY(0px); }
+	20% { opacity: 0; transform: translateY(30px); transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
 @media (min-width: 800px) {
     :root {
         font-size: 14pt;
-    }
-    body{
-        width: 85vw;
     }
 }
 @media (min-width: 1200px) {
@@ -35,15 +105,9 @@ p {
         font-size: 16pt;
         line-height: 1.4;
     }
-    body{
-        width: 75vw;
-    }
 }
 @media (min-width: 1600px) {
     :root {
         font-size: 18pt;
-    }
-    body{
-        width: 65vw;
     }
 }
