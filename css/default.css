@@ -17,19 +17,18 @@ nav {
 }
 
 header {
-    background: #1d1d1d;
+    background: radial-gradient(#383838, black);
     line-height: 1.2em;
     height: 35vh;
-    color: hsla(0, 0%, 70%, 1);
+    color: hsl(0, 0%, 85%);
     position: relative;
     font-size: 1.8em;
     font-family: sans-serif;
-    transition: font-size .35s ease-out;
     margin: 0 auto;
     text-align: center;
-    padding-top:30vh;
-    padding-right: 6em;
+    padding-top: 30vh;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.81);
+    transition: padding-top .35s linear, font-size .35s ease-out;
 }
 
 h1 {
@@ -39,11 +38,19 @@ h1 {
     text-align:right;
 }
 
+.intro{
+    width: 72vw;
+}
+
+.intro-text{
+    display: inline-block;
+}
+
 .ad {
     position: relative;
-    top: .27em;
-    height: 1.2em;
     text-align: left;
+    display: inline;
+    text-indent: .3em;
 }
 
 .ad span {
@@ -51,7 +58,7 @@ h1 {
     opacity: 0;
     overflow: hidden;
     animation: rotateWord 18s linear infinite 0s;
-    width: 7em;
+    width: 12em;
     color: hsla(284, 87%, 58%, 1);
 }
 
@@ -62,6 +69,7 @@ h1 {
 .ad span:nth-child(3) { 
 	animation-delay: 6s; 
 	color: hsla(55, 80%, 48%, 1);
+	width: 8em;
 }
 .ad span:nth-child(4) { 
 	animation-delay: 9s; 
@@ -75,10 +83,6 @@ h1 {
 	animation-delay: 15s; 
 	color: hsla(118, 71%, 49%, 1);
 	font-family: consolas;
-}
-
-.dib {
-    display: inline-block;
 }
 
 .vat {
@@ -97,11 +101,6 @@ h1 {
 }
 @media (min-width: 800px) {
     :root {
-        font-size: 14pt;
-    }
-}
-@media (min-width: 1200px) {
-    :root {
         font-size: 16pt;
         line-height: 1.4;
     }
@@ -109,5 +108,37 @@ h1 {
 @media (min-width: 1600px) {
     :root {
         font-size: 18pt;
+    }
+}
+@media (max-width: 800px) {
+    :root{
+        font-size: 18pt;
+    }
+    .intro-text{
+        display:block;
+    }
+    .ad{
+        text-indent: 0;
+    }
+    .intro {
+        width: 84vw;
+    }
+    header{
+        padding-top: 20vh;
+    }
+}
+@media (max-width: 650px) {
+    :root {
+        font-size: 16pt;
+    }
+}
+@media (max-width: 550px) {
+    :root {
+        font-size: 14pt;
+    }
+}
+@media (max-width: 450px) {
+    :root {
+        font-size: 12pt;
     }
 }
