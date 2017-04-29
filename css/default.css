@@ -19,7 +19,6 @@ nav {
 header {
     background: radial-gradient(#383838, black);
     line-height: 1.2em;
-    height: 63vh;
     min-height: 6.5em;
     box-sizing: border-box;
     color: hsl(0, 0%, 85%);
@@ -116,6 +115,9 @@ h1 {
     :root{
         font-size: 18pt;
     }
+    header{
+        padding: 20vh 0;
+    }
     .intro-text{
         display:block;
     }
@@ -124,9 +126,6 @@ h1 {
     }
     .intro {
         width: 84vw;
-    }
-    header{
-        padding-top: 20vh;
     }
 }
 @media (max-width: 650px) {
