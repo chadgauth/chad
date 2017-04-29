@@ -17,7 +17,7 @@ nav {
 }
 
 header {
-    background: radial-gradient(#383838, black);
+    background: radial-gradient(#333333, #1d1d1d);
     line-height: 1.2em;
     min-height: 6.5em;
     box-sizing: border-box;
