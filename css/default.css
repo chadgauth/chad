@@ -19,14 +19,16 @@ nav {
 header {
     background: radial-gradient(#383838, black);
     line-height: 1.2em;
-    height: 35vh;
+    height: 63vh;
+    min-height: 6.5em;
+    box-sizing: border-box;
     color: hsl(0, 0%, 85%);
     position: relative;
     font-size: 1.8em;
     font-family: sans-serif;
     margin: 0 auto;
     text-align: center;
-    padding-top: 30vh;
+    padding: 30vh 0;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.81);
     transition: padding-top .35s linear, font-size .35s ease-out;
 }
@@ -58,7 +60,7 @@ h1 {
     opacity: 0;
     overflow: hidden;
     animation: rotateWord 18s linear infinite 0s;
-    width: 12em;
+    width: 8em;
     color: hsla(284, 87%, 58%, 1);
 }
 
