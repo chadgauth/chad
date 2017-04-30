@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500');
+
 html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
 
 :root {
-    font-size: 12pt;
+    font-size: 18pt;
+    font-family: 'Cabin', sans-serif;
 }
 
 body {
@@ -18,46 +21,43 @@ nav {
 
 header {
     background: radial-gradient(#333333, #1d1d1d);
-    line-height: 1.2em;
-    min-height: 6.5em;
-    box-sizing: border-box;
-    color: hsl(0, 0%, 78%);
     position: relative;
-    font-size: 1.8em;
-    font-family: sans-serif;
     margin: 0 auto;
-    text-align: center;
-    padding: 30vh 0;
+    padding: 6.1em 0 7em 0;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.81);
     transition: padding-top .35s linear, font-size .35s ease-out;
 }
 
-h1 {
-    font-size: 1.7em;
-    margin-bottom: .7em;
-    font-weight: 600;
-    text-align:right;
+.intro{
+    width: 100%
 }
 
 .announce{
-	color: #f1f1f1;
-	font-size:1.6em;
-	line-height: 2em;
+	color: #e8e8e8;
+	font-size:3.5em;
+	line-height: 1.2em;
+	text-align: center;
 }
 
-.intro{
-    width: 72vw;
+.details{
+	padding-right:3.5em;
+	text-align: center;
 }
 
-.intro-text{
-    display: inline-block;
+.text{
+    display: inline;
+    line-height: 1.3em;
+    font-size: 1.5em;
+    color: #c1c1c1;
 }
 
 .ad {
-    position: relative;
     text-align: left;
     display: inline;
-    text-indent: .3em;
+    line-height: 1.3em;
+    font-size: 1.5em;
+    width: 10em;
+    text-indent: .1em;
 }
 
 .ad span {
@@ -65,7 +65,6 @@ h1 {
     opacity: 0;
     overflow: hidden;
     animation: rotateWord 18s linear infinite 0s;
-    width: 10em;
     color: hsl(107, 49%, 57%);
 }
 
@@ -104,46 +103,33 @@ h1 {
 	80% { opacity: 0; }
     100% { opacity: 0; }
 }
-@media (min-width: 800px) {
-    :root {
-        font-size: 16pt;
-        line-height: 1.4;
-    }
+
+@media (max-width:500px){
+	:root{
+		font-size: 12pt;
+	}
+
+	.details{
+		padding-right: 9.5em;
+	}
+	header {
+		padding-bottom: 5em
+	}
 }
-@media (min-width: 1600px) {
-    :root {
-        font-size: 18pt;
-    }
+
+@media (max-width:450px){
+	:root{
+		font-size: 12pt;
+	}
+
+	.details{
+		padding-right: 9.5em;
+	}
+	.announce{
+		font-size: 2.8em;
+	}
+	.text, .ad{
+		font-size: 1.3em;
+	}
 }
-@media (max-width: 800px) {
-    :root{
-        font-size: 18pt;
-    }
-    header{
-        padding: 20vh 0;
-    }
-    .intro-text{
-        display:block;
-    }
-    .ad{
-        text-indent: 0;
-    }
-    .intro {
-        width: 84vw;
-    }
-}
-@media (max-width: 650px) {
-    :root {
-        font-size: 16pt;
-    }
-}
-@media (max-width: 550px) {
-    :root {
-        font-size: 14pt;
-    }
-}
-@media (max-width: 450px) {
-    :root {
-        font-size: 12pt;
-    }
-}
+
